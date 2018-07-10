@@ -3,6 +3,15 @@
  * @param {Array} items
  * @returns {Array}
  */
-const removeDuplicateItems = (items) => {};
+
+const s = new Set();
+function Add(element) {
+  s.add(element);
+}
+const removeDuplicateItems = (items) => {
+  items.forEach(Add);
+  const arr = Array.from(s);
+  return arr;
+};
 
 module.exports = removeDuplicateItems;
